@@ -6,19 +6,25 @@
 <section class="main-wrap">
   <div class="main">
     <form [formGroup]="loginForm" (ngSubmit)="login()">
-    <h2 class="heading">Login Form</h2>
-    <hr>
-    <label class="names">Email: </label>
-<!--      formControlName=bind form controls-->
-    <input formControlName="email" type="email" class="field">
-    <br>
-    <br>
-    <label class="names">Password: </label>
-    <input  formControlName="password" type="password" class="field">
-    <br>
-    <br>
-<!--      disable submit button while invalid input-->
-    <input [disabled]="loginForm.invalid" type="submit" value="Login" class="btn {{loginForm.invalid?'invalid':''}}">
+      <h2 class="heading">Login Form</h2>
+      <hr>
+      <label class="names">Email: </label>
+      <!--      formControlName=bind form controls-->
+      <input formControlName="email" type="email" class="field">
+      <p class="alert">
+        Email is required...!
+      </p>
+      <br>
+
+      <label class="names">Password: </label>
+      <input formControlName="password" type="password" class="field">
+      <p class="alert">
+        Password is required...!
+      </p>
+      <br>
+
+      <!--      disable submit button while invalid input-->
+      <input [disabled]="loginForm.invalid" type="submit" value="Login" class="btn {{loginForm.invalid?'invalid':''}}">
     </form>
   </div>
 </section>

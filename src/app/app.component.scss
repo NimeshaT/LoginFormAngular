@@ -1,5 +1,5 @@
 
-.main{
+.main {
   width: 400px;
   height: 500px;
   background-color: white;
@@ -13,7 +13,7 @@
 }
 
 
-.main-wrap{
+.main-wrap {
   width: 100%;
   background: #D6A2E8;
   position: absolute;
@@ -24,28 +24,33 @@
   margin: auto;
   display: flex;
 }
-.heading{
+
+.heading {
   color: #82589F;
   text-align: center;
   margin-top: 20px;
 }
-.field{
+
+.field {
   width: 90%;
   height: 30px;
   margin-top: 15px;
   margin-left: 15px;
-  border: 1px solid #ced6e0 ;
+  border: 1px solid #ced6e0;
   border-radius: 15px;
 
 }
-.field:focus{
+
+.field:focus {
   outline: none;
 }
-.names{
+
+.names {
   margin-left: 15px;
   color: #82589F;
 }
-.btn{
+
+.btn {
   width: 60%;
   height: 30px;
   border-radius: 15px;
@@ -55,7 +60,19 @@
   background-color: #82589F;
   border: 1px solid #82589F;
 }
-.invalid{
+
+.invalid {
   background-color: #ced6e0;
   cursor: not-allowed;
+}
+
+.alert {
+  width: 90%;
+  height: 30px;
+  color: white;
+  background-color: brown;
+  border-radius: 15px;
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 15px;
 }
