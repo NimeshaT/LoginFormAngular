@@ -10,8 +10,20 @@ import {FormControl} from "@angular/forms";
 export class AppComponent {
   // title = 'LoginForm';
   loginForm = new FormGroup({
-    email: new FormControl(),
-    password: new FormControl()
+    email: new FormControl(
+      // like placeholder
+      '', [
+        Validators.required,
+        Validators.email
+      ]
+    ),
+    password: new FormControl(
+      '',[
+        Validators.required,
+        Validators.minLength(6),
+        Validators.maxLength(10)
+      ]
+    )
   });
 
   login() {
