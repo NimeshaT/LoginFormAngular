@@ -17,7 +17,8 @@
     <input  formControlName="password" type="password" class="field">
     <br>
     <br>
-    <input type="submit" value="Login" class="btn">
+<!--      disable submit button while invalid input-->
+    <input [disabled]="loginForm.invalid" type="submit" value="Login" class="btn {{loginForm.invalid?'invalid':''}}">
     </form>
   </div>
 </section>

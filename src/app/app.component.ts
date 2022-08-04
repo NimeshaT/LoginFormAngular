@@ -27,6 +27,7 @@ export class AppComponent {
   });
 
   login() {
+    console.log(this.loginForm)
     console.log(this.loginForm.get('email'))
     console.log(this.loginForm.get('password'))
   }
