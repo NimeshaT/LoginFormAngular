@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {FormGroup, Validators} from "@angular/forms";
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'LoginForm';
+  // title = 'LoginForm';
+  loginForm = new FormGroup({
+    email: new FormControl(),
+    password: new FormControl()
+  });
+
+  login() {
+    console.log(this.loginForm.get('email'))
+    console.log(this.loginForm.get('password'))
+  }
 }
