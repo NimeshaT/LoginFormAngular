@@ -11,14 +11,15 @@
       <label class="names">Email: </label>
       <!--      formControlName=bind form controls-->
       <input formControlName="email" type="email" class="field">
-      <p class="alert">
+<!--      if touch and invalid-->
+      <p class="alert" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
         Email is required...!
       </p>
       <br>
 
       <label class="names">Password: </label>
       <input formControlName="password" type="password" class="field">
-      <p class="alert">
+      <p class="alert" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
         Password is required...!
       </p>
       <br>
